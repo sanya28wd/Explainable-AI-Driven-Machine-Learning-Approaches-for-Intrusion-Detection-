@@ -1,0 +1,16 @@
+{
+  "best_model": "XGBoost",
+  "test_balanced_accuracy": 0.9672312544171707,
+  "test_macro_f1": 0.9763252344474389,
+  "classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Infiltration",
+    "PortScan"
+  ]
+}

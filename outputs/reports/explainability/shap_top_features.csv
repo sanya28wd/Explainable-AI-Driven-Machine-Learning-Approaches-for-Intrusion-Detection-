@@ -1,0 +1,21 @@
+feature,mean_abs_shap,percent,explanation
+Fwd Packet Length Max,2.5620108,17.719118,Oversized forward packets; enforce MTU limits.
+Init_Win_bytes_backward,2.085125,14.420929,"Layered network security: IDS/IPS, firewalls, monitoring."
+Fwd Packet Length Min,1.6732267,11.572201,"Layered network security: IDS/IPS, firewalls, monitoring."
+Fwd Packet Length Mean,1.4428159,9.978656,Deviation from normal packet size; potential attack signal.
+Total Length of Fwd Packets,1.314811,9.093362,Large forward data transfers; combine with duration for anomaly detection.
+Total Fwd Packets,1.2546679,8.677406,Excessive forward packets; consider throttling/blocking.
+Down/Up Ratio,0.5602561,3.8747864,"Layered network security: IDS/IPS, firewalls, monitoring."
+ACK Flag Count,0.52217287,3.6113987,"Layered network security: IDS/IPS, firewalls, monitoring."
+Destination Port,0.43677148,3.0207543,"Layered network security: IDS/IPS, firewalls, monitoring."
+Flow Duration,0.32337874,2.2365193,"Layered network security: IDS/IPS, firewalls, monitoring."
+Idle Std,0.2963604,2.0496576,"Layered network security: IDS/IPS, firewalls, monitoring."
+act_data_pkt_fwd,0.27969903,1.934426,High volume of forward application data; check for rate-limiting and suspicious flows.
+Bwd Packet Length Min,0.25799853,1.7843431,"Layered network security: IDS/IPS, firewalls, monitoring."
+URG Flag Count,0.25400746,1.7567405,"Layered network security: IDS/IPS, firewalls, monitoring."
+Active Mean,0.25322402,1.7513222,"Layered network security: IDS/IPS, firewalls, monitoring."
+Bwd IAT Total,0.2231139,1.5430776,"Layered network security: IDS/IPS, firewalls, monitoring."
+Flow IAT Min,0.19677986,1.3609488,"Layered network security: IDS/IPS, firewalls, monitoring."
+Fwd IAT Min,0.18462734,1.2769009,"Layered network security: IDS/IPS, firewalls, monitoring."
+min_seg_size_forward,0.17185225,1.188547,"Layered network security: IDS/IPS, firewalls, monitoring."
+Fwd IAT Std,0.16612053,1.1489059,"Layered network security: IDS/IPS, firewalls, monitoring."

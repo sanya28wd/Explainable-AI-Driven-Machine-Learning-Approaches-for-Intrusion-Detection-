@@ -1,0 +1,25 @@
+{
+  "selected_model": "XGBoost",
+  "test_balanced_accuracy": 0.9685383607082643,
+  "test_macro_f1": 0.9770874433885923,
+  "cv_best_row": {
+    "model": "XGBoost",
+    "macro_f1_mean": 0.9291089494963903,
+    "macro_f1_std": 0.01053784777440515,
+    "bal_acc_mean": 0.9143665274652418,
+    "bal_acc_std": 0.009128882026233543,
+    "fit_time_sec": 3.170981009801229,
+    "cv_time_sec": 61.377251863479614
+  },
+  "classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Infiltration",
+    "PortScan"
+  ]
+}

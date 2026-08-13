@@ -4,6 +4,12 @@ A research-focused intrusion detection project that combines machine learning wi
 
 This repository uses the CIC-IDS2017 dataset and evaluates multiple classifiers to detect cyber threats, with a focus on both predictive performance and interpretability using SHAP and LIME.
 
+## Project Description
+
+This project develops an explainable intrusion detection system for network traffic classification using machine learning techniques. It aims to detect a variety of cyberattacks, including DDoS, PortScan, Bot activity, and DoS-based attacks, while also helping security analysts understand why a given traffic flow was classified as malicious or benign.
+
+The system follows a complete workflow from data preprocessing to model training, evaluation, and interpretability analysis. It compares several widely used classifiers and selects the best-performing model using standard evaluation metrics. In addition, SHAP and LIME are applied to provide both global and instance-level explanations, making the model more transparent and suitable for real-world cybersecurity decision-making.
+
 ## Why this project matters
 
 Modern intrusion detection systems need to do more than classify traffic correctly. They must also explain why a flow was flagged, which features contributed to the decision, and which traffic patterns resemble known attacks. This project addresses that need by combining:

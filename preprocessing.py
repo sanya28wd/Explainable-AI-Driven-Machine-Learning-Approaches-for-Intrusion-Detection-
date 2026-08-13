@@ -13,8 +13,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import os
+from pathlib import Path
 
- 
+PROJECT_ROOT = Path(__file__).resolve().parent
+OUTPUT_CSV = PROJECT_ROOT / "preprocessed_cicids2017_nozerocols.csv"
 
 # List all CSV files in the current directory
 
@@ -224,10 +226,16 @@ np.savez(
 
  
 
-# Save scaler for later use
+# Save processed dataset and scaler for later use
 
 import pickle
 
-with open('scaler_cicids2017.pkl', 'wb') as f:
+# Save the fully prepared dataset in CSV format for downstream model training.
+df.to_csv(OUTPUT_CSV, index=False)
+print(f"Saved processed dataset to: {OUTPUT_CSV}")
+
+with open(PROJECT_ROOT / 'scaler_cicids2017.pkl', 'wb') as f:
 
    pickle.dump(scaler, f)
+
+print(f"Saved scaler to: {PROJECT_ROOT / 'scaler_cicids2017.pkl'}")

@@ -12,13 +12,13 @@ import shap
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 
-PROJECT_ROOT = Path("/Users/sanyawadhawan/Desktop/INTRUTION_DETECTION")
+PROJECT_ROOT = Path(__file__).resolve().parent
 DATA_PATH = PROJECT_ROOT / "preprocessed_cicids2017_nozerocols.csv"
 
-OUTPUT_DIR = PROJECT_ROOT / "model_outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 MODELS_DIR = OUTPUT_DIR / "models"
-REPORTS_DIR = OUTPUT_DIR / "reports"
-EXPLAIN_DIR = REPORTS_DIR / "explainability"
+REPORTS_DIR = OUTPUT_DIR / "reports" / "modeling outputs"
+EXPLAIN_DIR = OUTPUT_DIR / "reports" / "explainability"
 EXPLAIN_DIR.mkdir(parents=True, exist_ok=True)
 
 RANDOM_STATE = 42

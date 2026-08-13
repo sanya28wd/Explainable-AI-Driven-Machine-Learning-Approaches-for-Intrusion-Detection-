@@ -43,11 +43,11 @@ import lightgbm as lgb
 
 # 2. PATHS AND GLOBAL SETTINGS
 
-PROJECT_ROOT = Path("/Users/sanyawadhawan/Desktop/INTRUTION_DETECTION")
+PROJECT_ROOT = Path(__file__).resolve().parent
 DATA_PATH = PROJECT_ROOT / "preprocessed_cicids2017_nozerocols.csv"
-OUTPUT_DIR = PROJECT_ROOT / "model_outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 MODELS_DIR = OUTPUT_DIR / "models"
-REPORTS_DIR = OUTPUT_DIR / "reports"
+REPORTS_DIR = OUTPUT_DIR / "reports" / "modeling outputs"
 
 for p in (OUTPUT_DIR, MODELS_DIR, REPORTS_DIR):
     p.mkdir(parents=True, exist_ok=True)

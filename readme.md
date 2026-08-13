@@ -1,95 +1,178 @@
-# Intrusion Detection System
+# Explainable AI for Intrusion Detection
 
-This project implements a machine learning-based network intrusion detection system using the CIC-IDS2017 dataset. It includes both model training and explainability components to help understand model decisions.
+A research-focused intrusion detection project that combines machine learning with explainability to identify malicious network traffic while making model decisions understandable to human analysts.
 
-# Project Structure
+This repository uses the CIC-IDS2017 dataset and evaluates multiple classifiers to detect cyber threats, with a focus on both predictive performance and interpretability using SHAP and LIME.
 
-NTRUTION_DETECTION
-Preprocessing.py.  #preprocessing file 
-model.py # Main model training and evaluation script 
-explainability.py # Model explainability and interpretation 
-model_outputs/ # Directory containing model outputs 
-models/ # Saved models and preprocessors
-reports/ # Evaluation metrics and explainability reports 
-preprocessed_cicids2017_nozerocols.csv # Preprocessed dataset
+## Why this project matters
 
+Modern intrusion detection systems need to do more than classify traffic correctly. They must also explain why a flow was flagged, which features contributed to the decision, and which traffic patterns resemble known attacks. This project addresses that need by combining:
 
-# Data Preprocessing
+- robust preprocessing and feature engineering
+- multiple model comparisons
+- strong evaluation metrics
+- explainability tools for model interpretation
 
-The preprocessing pipeline includes:
+## Project goal
 
-1. Data Cleaning
-   - Replace infinite values with NaN
-   - Fill missing values with 0
-   - Remove duplicate rows
-   - Strip whitespace from column names
+To build and evaluate an explainable intrusion detection pipeline that can:
 
-2. Label Processing
-   - Convert target labels to binary classification
-   - Create 'Label_Binary' column (0 = BENIGN, 1 = Malicious)
+- detect malicious traffic reliably
+- highlight the most important network features contributing to the decision
+- support security analysis with interpretable visual explanations
 
-### Usage
+## Models used
+
+The project compares the following models:
+
+- Logistic Regression
+- Extra Trees Classifier
+- XGBoost
+- LightGBM
+
+The best-performing model selected by the pipeline is XGBoost.
+
+## Results snapshot
+
+The model outputs under `outputs/reports/modeling outputs/` show strong detection performance.
+
+| Metric | Value |
+| --- | ---: |
+| Cross-validation macro F1 (mean) | 0.9425 |
+| Cross-validation balanced accuracy (mean) | 0.9342 |
+| Test balanced accuracy | 0.9672 |
+| Test macro F1 | 0.9763 |
+
+These metrics indicate that the selected model is highly effective for distinguishing malicious traffic from benign traffic on the CIC-IDS2017 dataset.
+
+## Explainability results
+
+The project generates both local and global explanations to help interpret model decisions.
+
+### SHAP analysis
+
+SHAP values are used to quantify global feature importance across the dataset. The most influential features include:
+
+- Fwd Packet Length Max
+- Init_Win_bytes_backward
+- Fwd Packet Length Min
+- Fwd Packet Length Mean
+- Total Length of Fwd Packets
+
+Global SHAP plot:
+
+![SHAP global feature importance](outputs/reports/explainability/shap_global_top_features.png)
+
+Example local SHAP waterfall explanations:
+
+![SHAP waterfall sample](outputs/reports/explainability/shap_waterfall_sample_0.png)
+
+### LIME analysis
+
+LIME generates instance-level explanations for specific network samples. These are stored as HTML reports:
+
+- [LIME sample 1](outputs/reports/explainability/lime_sample_0.html)
+- [LIME sample 2](outputs/reports/explainability/lime_sample_46666.html)
+- [LIME sample 3](outputs/reports/explainability/lime_sample_93333.html)
+
+Combined summary report:
+
+- [Explainability report](outputs/reports/explainability/explainability_report.html)
+
+## Repository structure
+
+```text
+.
+├── preprocessing.py
+├── model.py
+├── explainability.py
+├── Dataset_download.md
+├── README.md
+├── requirements.txt
+├── preprocessed_cicids2017_nozerocols.csv    # generated after preprocessing
+├── scaler_cicids2017.pkl                    # saved scaler used for preprocessing
+├── outputs/
+│   └── reports/
+│       ├── explainability/
+│       └── modeling outputs/
+└── .gitignore
+```
+
+## Data pipeline
+
+The workflow includes:
+
+- loading the CIC-IDS2017 dataset
+- handling infinite and missing values
+- removing duplicate records
+- cleaning feature names
+- encoding labels
+- removing zero-variance and highly correlated features
+- splitting into train/test sets
+- training multiple models
+- selecting the best-performing model
+- generating SHAP and LIME explanations
+
+## Setup
+
+### 1. Clone the repository
+
 ```bash
-python Preprocessing.py
+git clone <repo-url>
+cd Explainable-AI-Driven-Machine-Learning-Approaches-for-Intrusion-Detection-
+```
 
-## Model Training (model.py)
+### 2. Create a virtual environment
 
-#Features
-- Implements multiple machine learning models for network intrusion detection
-- Handles class imbalance and performs feature selection
-- Includes hyperparameter tuning and cross-validation
-- Saves trained models and evaluation metrics
-
-# Models Implemented
-1. Logistic Regression
-2. Extra Trees Classifier
-3. XGBoost
-4. LightGBM
-
-# Usage
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Prepare the dataset
+
+Place the processed CIC-IDS2017 CSV at the project root as:
+
+```bash
+preprocessed_cicids2017_nozerocols.csv
+```
+
+You can download the source dataset using the instructions in `Dataset_download.md`.
+
+## Run the pipeline
+
+```bash
+python preprocessing.py
 python model.py
-
-#Model Performance
-The best performing model and its metrics are saved in model_outputs/reports/metrics.json
-
-#Explainability Analysis (explainability.py)
-
-#Features
--Generates SHAP (SHapley Additive exPlanations) values for model interpretability
--Creates visualizations of feature importance
--Provides human-readable explanations for model decisions
--Generates an HTML report with interactive visualizations
-
-#Outputs
-- SHAP summary plots
-- Feature importance rankings
-- Local explanation examples
-- Interactive HTML report
-
-#Usage
-bash
 python explainability.py
+```
 
-# Requirements
-Python 3.7+
-# Required packages 
-numpy
-pandas
-scikit-learn
-xgboost
-lightgbm
-imbalanced-learn
-shap
-matplotlib
-seaborn
-joblib
+This will generate:
 
-#Getting Started
+- processed data files
+- trained models
+- evaluation metrics
+- confusion matrix plots
+- SHAP plots and CSV summaries
+- LIME HTML explanation files
 
-1. Clone the repository
-2. Install dependencies listed under Requirements section
-3. Place your dataset as preprocessed_cicids2017_nozerocols.csv in the project root
-4. Run python model.py to train and evaluate models
-5. Run python explainability.py to generate model explanations
+## Notes
+
+- This project is structured as a reproducible research prototype for intrusion detection and explainable AI.
+- The scripts are designed to run from the repository root without needing hardcoded local paths.
+- Outputs are saved under `outputs/` to keep the repository organized and easy to review.
+
+## Project status
+
+The repository is functionally complete as a machine-learning and explainability pipeline for intrusion detection, with generated results and interpretability artifacts included. It is suitable for academic use, experimentation, and presentation in a portfolio or research setting.
+
+## License
+
+This project is intended for academic and research use. If a project-specific license is added later, it should be reviewed and applied accordingly.
 

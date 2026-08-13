@@ -13,6 +13,28 @@ This repository uses the CIC-IDS2017 dataset and evaluates multiple classifiers 
 - Explainability through SHAP and LIME for both global and local interpretation
 - Visual reports for feature importance and sample-level decisions
 
+## Workflow Overview
+
+```text
+Data Collection
+      ↓
+Preprocessing
+      ↓
+Feature Engineering
+      ↓
+Train/Test Split
+      ↓
+Model Comparison
+      ↓
+Select Best Model
+      ↓
+Evaluate on Test Set
+      ↓
+SHAP + LIME Explainability
+      ↓
+Reports and Visualizations
+```
+
 ## Project Description
 
 This project develops an explainable intrusion detection system for network traffic classification using machine learning techniques. It aims to detect a variety of cyberattacks, including DDoS, PortScan, Bot activity, and DoS-based attacks, while also helping security analysts understand why a given traffic flow was classified as malicious or benign.

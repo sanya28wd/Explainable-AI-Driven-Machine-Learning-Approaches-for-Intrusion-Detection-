@@ -1,0 +1,74 @@
+.example-list {
+  max-height: 660px;
+  overflow-y: auto;
+}
+
+.explanation {
+  align-self: start;
+}
+
+.methodology {
+  padding-bottom: 48px;
+}
+
+.lessons div,
+.preview-card,
+.model-chart,
+.matrix-card,
+.global,
+.feature-table div {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.lessons div:hover,
+.lessons div:focus-within,
+.preview-card:hover,
+.model-chart:hover,
+.matrix-card:hover,
+.global:hover,
+.feature-table div:hover {
+  border-color: #4ee6dd;
+  box-shadow: 0 0 0 1px #4ee6dd33, 0 0 28px #4ee6dd1c;
+  transform: translateY(-3px);
+}
+
+.lessons div p {
+  font-size: 0;
+}
+
+.lessons div p::after {
+  color: #b7c9dc;
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lessons div:nth-child(1) p::after {
+  content: "Held-out CIC-IDS2017 results may not generalize to new networks.";
+}
+
+.lessons div:nth-child(2) p::after {
+  content: "Test time- and network-separated splits; investigate class confusions.";
+}
+
+.lessons div:nth-child(3) p::after {
+  content: "Explanations describe model behavior; they do not prove causation.";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lessons div:hover,
+  .lessons div:focus-within,
+  .preview-card:hover,
+  .model-chart:hover,
+  .matrix-card:hover,
+  .global:hover,
+  .feature-table div:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .example-list {
+    max-height: 420px;
+  }
+}

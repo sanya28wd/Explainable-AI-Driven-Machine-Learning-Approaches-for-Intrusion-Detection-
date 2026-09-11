@@ -1,178 +1,97 @@
-# Explainable AI for Intrusion Detection
+# Explainable Intrusion Detection Lab
 
-A research-focused intrusion detection project that combines machine learning with explainability to identify malicious network traffic while making model decisions understandable to human analysts.
+An explainable, multiclass network-intrusion-detection project built with the CIC-IDS2017 benchmark. It compares four machine-learning models, evaluates the selected model on a fixed held-out test set, and publishes recorded SHAP and LIME explanations for curated network flows.
 
-This repository uses the CIC-IDS2017 dataset and evaluates multiple classifiers to detect cyber threats, with a focus on both predictive performance and interpretability using SHAP and LIME.
+## Live research explorer
 
-## Why this project matters
+[Open the interactive website](https://explainable-intrusion-lab.f20230296631802.chatgpt.site)
 
-Modern intrusion detection systems need to do more than classify traffic correctly. They must also explain why a flow was flagged, which features contributed to the decision, and which traffic patterns resemble known attacks. This project addresses that need by combining:
+The website is a static Stage 1 research explorer. It loads recorded, versioned results; it does not run live inference in the browser.
 
-- robust preprocessing and feature engineering
-- multiple model comparisons
-- strong evaluation metrics
-- explainability tools for model interpretation
+## Canonical experiment
 
-## Project goal
+The canonical run is `cicids2017-canonical-v1`.
 
-To build and evaluate an explainable intrusion detection pipeline that can:
+- Dataset: eight CIC-IDS2017 CSV source files, checksum recorded in the experiment manifest.
+- Sampling: seeded stratified reservoir sampling, capped at 100,000 rows per file.
+- Labels: original multiclass attack labels are preserved.
+- Leakage controls: identifiers, IPs, ports, timestamps, protocol, targets, and derived targets are excluded from features.
+- Evaluation: fixed stratified 80/20 development/test split; five-fold CV on the development set; selection by mean macro F1.
+- Explanations: SHAP is calculated on the fitted model's transformed feature space; LIME is generated for the curated held-out examples.
 
-- detect malicious traffic reliably
-- highlight the most important network features contributing to the decision
-- support security analysis with interpretable visual explanations
+The first canonical run sampled 800,000 flows before cleaning and retained 14 classes. LightGBM was selected by cross-validation macro F1; see the exported evaluation file or interactive site for the exact metrics and per-class outcomes.
 
-## Models used
-
-The project compares the following models:
-
-- Logistic Regression
-- Extra Trees Classifier
-- XGBoost
-- LightGBM
-
-The best-performing model selected by the pipeline is XGBoost.
-
-## Results snapshot
-
-The model outputs under `outputs/reports/modeling outputs/` show strong detection performance.
-
-| Metric | Value |
-| --- | ---: |
-| Cross-validation macro F1 (mean) | 0.9425 |
-| Cross-validation balanced accuracy (mean) | 0.9342 |
-| Test balanced accuracy | 0.9672 |
-| Test macro F1 | 0.9763 |
-
-These metrics indicate that the selected model is highly effective for distinguishing malicious traffic from benign traffic on the CIC-IDS2017 dataset.
-
-## Explainability results
-
-The project generates both local and global explanations to help interpret model decisions.
-
-### SHAP analysis
-
-SHAP values are used to quantify global feature importance across the dataset. The most influential features include:
-
-- Fwd Packet Length Max
-- Init_Win_bytes_backward
-- Fwd Packet Length Min
-- Fwd Packet Length Mean
-- Total Length of Fwd Packets
-
-Global SHAP plot:
-
-![SHAP global feature importance](outputs/reports/explainability/shap_global_top_features.png)
-
-Example local SHAP waterfall explanations:
-
-![SHAP waterfall sample](outputs/reports/explainability/shap_waterfall_sample_0.png)
-
-### LIME analysis
-
-LIME generates instance-level explanations for specific network samples. These are stored as HTML reports:
-
-- [LIME sample 1](outputs/reports/explainability/lime_sample_0.html)
-- [LIME sample 2](outputs/reports/explainability/lime_sample_46666.html)
-- [LIME sample 3](outputs/reports/explainability/lime_sample_93333.html)
-
-Combined summary report:
-
-- [Explainability report](outputs/reports/explainability/explainability_report.html)
-
-## Repository structure
+## Repository layout
 
 ```text
-.
-├── preprocessing.py
-├── model.py
-├── explainability.py
-├── Dataset_download.md
-├── README.md
-├── requirements.txt
-├── preprocessed_cicids2017_nozerocols.csv    # generated after preprocessing
-├── scaler_cicids2017.pkl                    # saved scaler used for preprocessing
-├── outputs/
-│   └── reports/
-│       ├── explainability/
-│       └── modeling outputs/
-└── .gitignore
+archive/                         Local CIC-IDS2017 CSV inputs (not committed)
+research/run_canonical_experiment.py
+research/validate_canonical_experiment.py
+website/                         React/TypeScript research explorer
+website/public/research/         Versioned static website exports
+artifacts/canonical-v1/          Local model and experiment artifacts (not committed)
 ```
 
-## Data pipeline
+## Reproduce the canonical experiment
 
-The workflow includes:
+### 1. Get the dataset
 
-- loading the CIC-IDS2017 dataset
-- handling infinite and missing values
-- removing duplicate records
-- cleaning feature names
-- encoding labels
-- removing zero-variance and highly correlated features
-- splitting into train/test sets
-- training multiple models
-- selecting the best-performing model
-- generating SHAP and LIME explanations
+Download CIC-IDS2017 from the [official dataset page](https://www.unb.ca/cic/datasets/ids-2017.html), extract the CSV files, and place them in `archive/`. The raw dataset is not included in this repository.
 
-## Setup
+### 2. Set up Python
 
-### 1. Clone the repository
+Requires Python 3.11 or newer.
 
 ```bash
-git clone <repo-url>
-cd Explainable-AI-Driven-Machine-Learning-Approaches-for-Intrusion-Detection-
-```
-
-### 2. Create a virtual environment
-
-```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-canonical.txt
 ```
 
-### 3. Install dependencies
+### 3. Train and export
 
 ```bash
-pip install -r requirements.txt
+python research/run_canonical_experiment.py \
+  --data-dir archive \
+  --output-dir artifacts/canonical-v1 \
+  --seed 42 \
+  --max-rows-per-file 100000 \
+  --cv-folds 5 \
+  --test-size 0.2 \
+  --examples 60 \
+  --lime-samples 2000
 ```
 
-### 4. Prepare the dataset
+The full run can take several hours because it compares four models across five folds and generates 60 local explanations.
 
-Place the processed CIC-IDS2017 CSV at the project root as:
+### 4. Validate exports
 
 ```bash
-preprocessed_cicids2017_nozerocols.csv
+python research/validate_canonical_experiment.py \
+  --artifact-dir artifacts/canonical-v1
 ```
 
-You can download the source dataset using the instructions in `Dataset_download.md`.
+Expected output:
 
-## Run the pipeline
+```text
+Validation passed: 60 examples from cicids2017-canonical-v1
+```
+
+## Website development
 
 ```bash
-python preprocessing.py
-python model.py
-python explainability.py
+cd website
+npm ci
+npm run dev
 ```
 
-This will generate:
+The website is deliberately separate from the offline Python training workflow. It ships compact JSON exports only; it does not ship the raw dataset, model binary, or complete prediction table.
 
-- processed data files
-- trained models
-- evaluation metrics
-- confusion matrix plots
-- SHAP plots and CSV summaries
-- LIME HTML explanation files
+## Limitations
 
-## Notes
+This is a historical, controlled benchmark. Random held-out performance does not guarantee performance on new production networks. SHAP and LIME describe learned model behavior and should not be treated as evidence of causation.
 
-- This project is structured as a reproducible research prototype for intrusion detection and explainable AI.
-- The scripts are designed to run from the repository root without needing hardcoded local paths.
-- Outputs are saved under `outputs/` to keep the repository organized and easy to review.
+## License and attribution
 
-## Project status
-
-The repository is functionally complete as a machine-learning and explainability pipeline for intrusion detection, with generated results and interpretability artifacts included. It is suitable for academic use, experimentation, and presentation in a portfolio or research setting.
-
-## License
-
-This project is intended for academic and research use. If a project-specific license is added later, it should be reviewed and applied accordingly.
-
+Use the CIC-IDS2017 dataset in accordance with its source terms and cite the Canadian Institute for Cybersecurity / University of New Brunswick dataset documentation in academic or professional work.

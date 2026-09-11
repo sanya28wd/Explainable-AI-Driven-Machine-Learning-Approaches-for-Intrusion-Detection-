@@ -1,0 +1,665 @@
+{
+  "experiment_id": "cicids2017-canonical-v1",
+  "examples": [
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-000",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-001",
+      "actual_label": "DoS Hulk",
+      "prediction": "DoS Hulk",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-002",
+      "actual_label": "DDoS",
+      "prediction": "DDoS",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-003",
+      "actual_label": "Bot",
+      "prediction": "Bot",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-004",
+      "actual_label": "FTP-Patator",
+      "prediction": "FTP-Patator",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-005",
+      "actual_label": "PortScan",
+      "prediction": "PortScan",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-006",
+      "actual_label": "DoS Slowhttptest",
+      "prediction": "DoS Slowhttptest",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-007",
+      "actual_label": "BENIGN",
+      "prediction": "Bot",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-008",
+      "actual_label": "SSH-Patator",
+      "prediction": "SSH-Patator",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-009",
+      "actual_label": "DoS GoldenEye",
+      "prediction": "DoS GoldenEye",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-010",
+      "actual_label": "Web Attack \ufffd Brute Force",
+      "prediction": "Web Attack \ufffd Brute Force",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-011",
+      "actual_label": "DoS slowloris",
+      "prediction": "DoS slowloris",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-012",
+      "actual_label": "Bot",
+      "prediction": "BENIGN",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-013",
+      "actual_label": "DoS Hulk",
+      "prediction": "BENIGN",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-014",
+      "actual_label": "Web Attack \ufffd Brute Force",
+      "prediction": "Web Attack \ufffd XSS",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-015",
+      "actual_label": "DoS slowloris",
+      "prediction": "Web Attack \ufffd Brute Force",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-016",
+      "actual_label": "Web Attack \ufffd XSS",
+      "prediction": "Web Attack \ufffd XSS",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-017",
+      "actual_label": "PortScan",
+      "prediction": "Web Attack \ufffd XSS",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-018",
+      "actual_label": "DDoS",
+      "prediction": "BENIGN",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-019",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-020",
+      "actual_label": "DDoS",
+      "prediction": "DDoS",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-021",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-022",
+      "actual_label": "Web Attack \ufffd XSS",
+      "prediction": "Web Attack \ufffd Brute Force",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-023",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-024",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-025",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-026",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-027",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-028",
+      "actual_label": "Infiltration",
+      "prediction": "Infiltration",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-029",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-030",
+      "actual_label": "DDoS",
+      "prediction": "DDoS",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-031",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-032",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-033",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-034",
+      "actual_label": "DoS Slowhttptest",
+      "prediction": "BENIGN",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-035",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-036",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-037",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-038",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-039",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-040",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-041",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-042",
+      "actual_label": "Web Attack \ufffd Sql Injection",
+      "prediction": "Web Attack \ufffd Brute Force",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-043",
+      "actual_label": "DoS GoldenEye",
+      "prediction": "DoS Hulk",
+      "correct": false,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-044",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-045",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-046",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-047",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-048",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-049",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-050",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-051",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-052",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-053",
+      "actual_label": "Web Attack \ufffd Sql Injection",
+      "prediction": "Web Attack \ufffd Sql Injection",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-054",
+      "actual_label": "DDoS",
+      "prediction": "DDoS",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-055",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-056",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-057",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-058",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    },
+    {
+      "experiment_id": "cicids2017-canonical-v1",
+      "id": "flow-059",
+      "actual_label": "BENIGN",
+      "prediction": "BENIGN",
+      "correct": true,
+      "available_explanations": [
+        "shap",
+        "lime"
+      ]
+    }
+  ]
+}

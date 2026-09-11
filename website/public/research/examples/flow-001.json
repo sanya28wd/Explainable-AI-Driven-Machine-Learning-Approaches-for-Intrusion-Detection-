@@ -1,0 +1,443 @@
+{
+  "experiment_id": "cicids2017-canonical-v1",
+  "id": "flow-001",
+  "actual_label": "DoS Hulk",
+  "prediction": "DoS Hulk",
+  "probabilities": {
+    "BENIGN": 2.003141207837381e-09,
+    "Bot": 8.928068544171219e-11,
+    "DDoS": 9.031763611971161e-13,
+    "DoS GoldenEye": 1.2159466619314797e-10,
+    "DoS Hulk": 0.9999999951357132,
+    "DoS Slowhttptest": 1.9062977210239213e-11,
+    "DoS slowloris": 2.887095481842046e-10,
+    "FTP-Patator": 5.539844039279301e-13,
+    "Infiltration": 4.22815524408399e-12,
+    "PortScan": 3.362196501518387e-11,
+    "SSH-Patator": 1.1703845899629282e-12,
+    "Web Attack \ufffd Brute Force": 1.6621845174033535e-09,
+    "Web Attack \ufffd Sql Injection": 1.6249275499947727e-11,
+    "Web Attack \ufffd XSS": 6.235861736915361e-10
+  },
+  "raw_features": {
+    "Flow Duration": 100162736.0,
+    "Total Fwd Packets": 9.0,
+    "Total Backward Packets": 6.0,
+    "Total Length of Fwd Packets": 756.0,
+    "Total Length of Bwd Packets": 11595.0,
+    "Fwd Packet Length Max": 378.0,
+    "Fwd Packet Length Min": 0.0,
+    "Fwd Packet Length Mean": 84.0,
+    "Fwd Packet Length Std": 166.6823326,
+    "Bwd Packet Length Max": 2907.0,
+    "Bwd Packet Length Min": 0.0,
+    "Bwd Packet Length Mean": 1932.5,
+    "Bwd Packet Length Std": 1496.914126,
+    "Flow Bytes/s": 123.3093313,
+    "Flow Packets/s": 0.149756293,
+    "Flow IAT Mean": 7154481.143,
+    "Flow IAT Std": 26700000.0,
+    "Flow IAT Max": 99800000.0,
+    "Flow IAT Min": 1.0,
+    "Fwd IAT Total": 100000000.0,
+    "Fwd IAT Mean": 12500000.0,
+    "Fwd IAT Std": 35300000.0,
+    "Fwd IAT Max": 99800000.0,
+    "Fwd IAT Min": 1.0,
+    "Bwd IAT Total": 346469.0,
+    "Bwd IAT Mean": 69293.8,
+    "Bwd IAT Std": 100172.8404,
+    "Bwd IAT Max": 219017.0,
+    "Bwd IAT Min": 18.0,
+    "Fwd PSH Flags": 0.0,
+    "Fwd URG Flags": 0.0,
+    "Fwd Header Length": 296.0,
+    "Bwd Header Length": 200.0,
+    "Fwd Packets/s": 0.089853776,
+    "Bwd Packets/s": 0.059902517,
+    "Min Packet Length": 0.0,
+    "Max Packet Length": 2907.0,
+    "Packet Length Mean": 771.9375,
+    "Packet Length Std": 1274.43229,
+    "Packet Length Variance": 1624177.663,
+    "FIN Flag Count": 0.0,
+    "SYN Flag Count": 0.0,
+    "RST Flag Count": 0.0,
+    "PSH Flag Count": 0.0,
+    "ACK Flag Count": 1.0,
+    "URG Flag Count": 0.0,
+    "CWE Flag Count": 0.0,
+    "ECE Flag Count": 0.0,
+    "Down/Up Ratio": 0.0,
+    "Average Packet Size": 823.4,
+    "Avg Fwd Segment Size": 84.0,
+    "Avg Bwd Segment Size": 1932.5,
+    "Fwd Header Length.1": 296.0,
+    "Subflow Fwd Packets": 9.0,
+    "Subflow Fwd Bytes": 756.0,
+    "Subflow Bwd Packets": 6.0,
+    "Subflow Bwd Bytes": 11595.0,
+    "Init_Win_bytes_forward": 274.0,
+    "Init_Win_bytes_backward": 235.0,
+    "act_data_pkt_fwd": 2.0,
+    "min_seg_size_forward": 32.0,
+    "Active Mean": 1014.0,
+    "Active Std": 0.0,
+    "Active Max": 1014.0,
+    "Active Min": 1014.0,
+    "Idle Mean": 99800000.0,
+    "Idle Std": 0.0,
+    "Idle Max": 99800000.0,
+    "Idle Min": 99800000.0
+  },
+  "shap": {
+    "target_class": "DoS Hulk",
+    "units": "raw model score",
+    "baseline": -12.52429243235147,
+    "output": 11.610216812840072,
+    "contributions": [
+      {
+        "feature": "Flow Duration",
+        "value": -0.06750301035704934
+      },
+      {
+        "feature": "Total Fwd Packets",
+        "value": 0.14785927756238343
+      },
+      {
+        "feature": "Total Backward Packets",
+        "value": -0.10636869619698489
+      },
+      {
+        "feature": "Total Length of Fwd Packets",
+        "value": 0.029074896597630632
+      },
+      {
+        "feature": "Total Length of Bwd Packets",
+        "value": 2.464064582011501
+      },
+      {
+        "feature": "Fwd Packet Length Max",
+        "value": 0.11005607521894191
+      },
+      {
+        "feature": "Fwd Packet Length Min",
+        "value": 0.0002816789284020474
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "value": 0.1114669631963735
+      },
+      {
+        "feature": "Fwd Packet Length Std",
+        "value": 0.27876636912793656
+      },
+      {
+        "feature": "Bwd Packet Length Max",
+        "value": 1.5771346703883353
+      },
+      {
+        "feature": "Bwd Packet Length Min",
+        "value": -0.00035946279379924255
+      },
+      {
+        "feature": "Bwd Packet Length Mean",
+        "value": 3.5532652054541654
+      },
+      {
+        "feature": "Bwd Packet Length Std",
+        "value": 0.168763521351008
+      },
+      {
+        "feature": "Flow Bytes/s",
+        "value": 0.08170741125210541
+      },
+      {
+        "feature": "Flow Packets/s",
+        "value": 0.09461536197874298
+      },
+      {
+        "feature": "Flow IAT Mean",
+        "value": 0.014736464070898302
+      },
+      {
+        "feature": "Flow IAT Std",
+        "value": 0.18921926828020544
+      },
+      {
+        "feature": "Flow IAT Max",
+        "value": -0.040957213792667625
+      },
+      {
+        "feature": "Flow IAT Min",
+        "value": 0.0333298902485497
+      },
+      {
+        "feature": "Fwd IAT Total",
+        "value": 0.03566790010979946
+      },
+      {
+        "feature": "Fwd IAT Mean",
+        "value": 0.13997064334246792
+      },
+      {
+        "feature": "Fwd IAT Std",
+        "value": 2.7377002679107183
+      },
+      {
+        "feature": "Fwd IAT Max",
+        "value": -0.010477036625695307
+      },
+      {
+        "feature": "Fwd IAT Min",
+        "value": 0.18289545277614738
+      },
+      {
+        "feature": "Bwd IAT Total",
+        "value": 0.014378995566583532
+      },
+      {
+        "feature": "Bwd IAT Mean",
+        "value": 0.012362695815295838
+      },
+      {
+        "feature": "Bwd IAT Std",
+        "value": 0.01524373153162233
+      },
+      {
+        "feature": "Bwd IAT Max",
+        "value": 0.01088749711257242
+      },
+      {
+        "feature": "Bwd IAT Min",
+        "value": 0.009565582581741106
+      },
+      {
+        "feature": "Fwd PSH Flags",
+        "value": 7.391258705075922e-05
+      },
+      {
+        "feature": "Fwd URG Flags",
+        "value": 0.0
+      },
+      {
+        "feature": "Fwd Header Length",
+        "value": 1.2097255857105897
+      },
+      {
+        "feature": "Bwd Header Length",
+        "value": 0.27147659281981534
+      },
+      {
+        "feature": "Fwd Packets/s",
+        "value": 0.012173734264867888
+      },
+      {
+        "feature": "Bwd Packets/s",
+        "value": 0.0032415679062144298
+      },
+      {
+        "feature": "Min Packet Length",
+        "value": 0.004385897376930715
+      },
+      {
+        "feature": "Max Packet Length",
+        "value": -0.00010165237165158716
+      },
+      {
+        "feature": "Packet Length Mean",
+        "value": -0.004608745032468385
+      },
+      {
+        "feature": "Packet Length Std",
+        "value": 0.023595432399728025
+      },
+      {
+        "feature": "Packet Length Variance",
+        "value": 0.016886347082317673
+      },
+      {
+        "feature": "FIN Flag Count",
+        "value": -0.043389577905229404
+      },
+      {
+        "feature": "SYN Flag Count",
+        "value": 0.0006619968995166745
+      },
+      {
+        "feature": "RST Flag Count",
+        "value": 0.0
+      },
+      {
+        "feature": "PSH Flag Count",
+        "value": 0.061221841168571246
+      },
+      {
+        "feature": "ACK Flag Count",
+        "value": 0.08446555694588856
+      },
+      {
+        "feature": "URG Flag Count",
+        "value": 0.0224604447772201
+      },
+      {
+        "feature": "CWE Flag Count",
+        "value": 0.0
+      },
+      {
+        "feature": "ECE Flag Count",
+        "value": 0.0
+      },
+      {
+        "feature": "Down/Up Ratio",
+        "value": 0.01140332128060783
+      },
+      {
+        "feature": "Average Packet Size",
+        "value": 0.05863928771728088
+      },
+      {
+        "feature": "Avg Fwd Segment Size",
+        "value": 0.03607276058556413
+      },
+      {
+        "feature": "Avg Bwd Segment Size",
+        "value": 0.7416593745801185
+      },
+      {
+        "feature": "Fwd Header Length.1",
+        "value": 0.28188678061902367
+      },
+      {
+        "feature": "Subflow Fwd Packets",
+        "value": 0.09475236527002946
+      },
+      {
+        "feature": "Subflow Fwd Bytes",
+        "value": -0.004036580647106448
+      },
+      {
+        "feature": "Subflow Bwd Packets",
+        "value": -0.013220300220019972
+      },
+      {
+        "feature": "Subflow Bwd Bytes",
+        "value": 0.3320546169383763
+      },
+      {
+        "feature": "Init_Win_bytes_forward",
+        "value": 1.7741302639221859
+      },
+      {
+        "feature": "Init_Win_bytes_backward",
+        "value": 6.632617834094395
+      },
+      {
+        "feature": "act_data_pkt_fwd",
+        "value": 0.06855676198677879
+      },
+      {
+        "feature": "min_seg_size_forward",
+        "value": -0.030487382919449316
+      },
+      {
+        "feature": "Active Mean",
+        "value": 0.04126918211670243
+      },
+      {
+        "feature": "Active Std",
+        "value": 0.0
+      },
+      {
+        "feature": "Active Max",
+        "value": 0.014052664151349948
+      },
+      {
+        "feature": "Active Min",
+        "value": 0.16645685329287493
+      },
+      {
+        "feature": "Idle Mean",
+        "value": 0.04149767652181706
+      },
+      {
+        "feature": "Idle Std",
+        "value": -4.23674117508559e-05
+      },
+      {
+        "feature": "Idle Max",
+        "value": 0.002558287555094494
+      },
+      {
+        "feature": "Idle Min",
+        "value": 0.43506992848037224
+      }
+    ]
+  },
+  "lime": {
+    "target_class": "DoS Hulk",
+    "score": 0.04063314755829872,
+    "weights": [
+      {
+        "feature": "act_data_pkt_fwd",
+        "weight": 0.004899474024319446
+      },
+      {
+        "feature": "Idle Max",
+        "weight": 0.004060752346880853
+      },
+      {
+        "feature": "Fwd IAT Max",
+        "weight": 0.003883763601494483
+      },
+      {
+        "feature": "Subflow Bwd Packets",
+        "weight": 0.0038136326124821804
+      },
+      {
+        "feature": "Bwd Packets/s",
+        "weight": 0.0037327789238296963
+      },
+      {
+        "feature": "Subflow Fwd Bytes",
+        "weight": 0.0037319284042609873
+      },
+      {
+        "feature": "Active Max",
+        "weight": 0.0037090405203584293
+      },
+      {
+        "feature": "Bwd IAT Mean",
+        "weight": 0.0036786875917563648
+      },
+      {
+        "feature": "Total Fwd Packets",
+        "weight": 0.003675650484255251
+      },
+      {
+        "feature": "Max Packet Length",
+        "weight": 0.0036225623027930256
+      },
+      {
+        "feature": "Avg Fwd Segment Size",
+        "weight": 0.0035686990766509974
+      },
+      {
+        "feature": "Fwd IAT Mean",
+        "weight": 0.003555316988663903
+      },
+      {
+        "feature": "Flow IAT Std",
+        "weight": 0.0035140751324500286
+      },
+      {
+        "feature": "Fwd IAT Total",
+        "weight": 0.0033960154536080665
+      },
+      {
+        "feature": "FIN Flag Count",
+        "weight": 0.0029171426679287147
+      }
+    ]
+  }
+}

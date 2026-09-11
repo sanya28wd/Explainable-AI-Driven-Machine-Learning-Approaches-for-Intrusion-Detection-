@@ -1,0 +1,350 @@
+{
+  "experiment_id": "cicids2017-canonical-v1",
+  "features": [
+    {
+      "name": "Flow Duration",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Total Fwd Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Total Backward Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Total Length of Fwd Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Total Length of Bwd Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Packet Length Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Packet Length Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Packet Length Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Packet Length Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Packet Length Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Packet Length Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Packet Length Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Packet Length Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow Bytes/s",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow Packets/s",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow IAT Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow IAT Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow IAT Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Flow IAT Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd IAT Total",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd IAT Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd IAT Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd IAT Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd IAT Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd IAT Total",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd IAT Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd IAT Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd IAT Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd IAT Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd PSH Flags",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd URG Flags",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Header Length",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Header Length",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Packets/s",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Bwd Packets/s",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Min Packet Length",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Max Packet Length",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Packet Length Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Packet Length Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Packet Length Variance",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "FIN Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "SYN Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "RST Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "PSH Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "ACK Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "URG Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "CWE Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "ECE Flag Count",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Down/Up Ratio",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Average Packet Size",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Avg Fwd Segment Size",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Avg Bwd Segment Size",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Fwd Header Length.1",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Subflow Fwd Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Subflow Fwd Bytes",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Subflow Bwd Packets",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Subflow Bwd Bytes",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Init_Win_bytes_forward",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Init_Win_bytes_backward",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "act_data_pkt_fwd",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "min_seg_size_forward",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Active Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Active Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Active Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Active Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Idle Mean",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Idle Std",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Idle Max",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    },
+    {
+      "name": "Idle Min",
+      "unit": "dataset unit",
+      "definition": "CIC-IDS2017 numeric flow feature."
+    }
+  ]
+}

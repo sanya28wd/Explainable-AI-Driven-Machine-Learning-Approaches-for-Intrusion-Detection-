@@ -4,7 +4,7 @@ An explainable, multiclass network-intrusion-detection project built with the CI
 
 ## Live research explorer
 
-[Open the interactive website](https://explainable-intrusion-lab.f20230296631802.chatgpt.site)
+[Open the interactive website](https://sanya28wd.github.io/Explainable-AI-Driven-Machine-Learning-Approaches-for-Intrusion-Detection-/)
 
 The website is a static Stage 1 research explorer. It loads recorded, versioned results; it does not run live inference in the browser.
 
